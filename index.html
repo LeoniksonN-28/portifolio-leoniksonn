@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfólio de projetos</title>
+  <style>
+    /* Reset e base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #1a1a2e;
+      color: #e0e0e0;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 24px;
+    }
+    header {
+      max-width: 960px;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .avatar {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid #8b5cf6;
+      margin: 0 auto 24px auto;
+      object-fit: cover;
+      box-shadow: 0 0 15px rgba(139, 92, 246, 0.7);
+    }
+    h1, h2, h3 {
+      background: linear-gradient(135deg, #8b5cf6, #06b6d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      margin-bottom: 16px;
+    }
+    p {
+      max-width: 700px;
+      margin: 0 auto 24px auto;
+      color: #b0b0c0;
+    }
+    main {
+      max-width: 960px;
+      width: 100%;
+    }
+
+    /* Seção de habilidades */
+    .skills-section {
+      background: rgba(50, 50, 70, 0.7);
+      border-radius: 20px;
+      padding: 32px;
+      margin-bottom: 48px;
+      box-shadow: 0 4px 14px rgba(139, 92, 246, 0.3);
+    }
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+    }
+    .skill-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 120px;
+      text-align: center;
+      color: #d0d0e0;
+      transition: transform 0.3s ease;
+      cursor: default;
+    }
+    .skill-item:hover {
+      transform: scale(1.1);
+      color: #06b6d4;
+    }
+    .skill-icon {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 12px;
+      filter: drop-shadow(0 0 2px rgba(139, 92, 246, 0.8));
+    }
+
+    /* Projetos */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap: 32px;
+    }
+    .project-card {
+      background: rgba(50,50,70,0.7);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 4px 14px rgba(139, 92, 246, 0.3);
+      transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      color: #e0e0e0;
+    }
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 28px rgba(139, 92, 246, 0.6);
+    }
+    .project-image {
+      width: 100%;
+      height: 160px;
+      border-radius: 12px;
+      object-fit: cover;
+      margin-bottom: 18px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    }
+    .project-title {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+    .project-description {
+      flex-grow: 1;
+      margin-bottom: 16px;
+      color: #bbb;
+    }
+    .project-links a {
+      color: #8b5cf6;
+      text-decoration: none;
+      font-weight: 600;
+      margin-right: 16px;
+      transition: color 0.3s ease;
+    }
+    .project-links a:hover,
+    .project-links a:focus {
+      color: #06b6d4;
+      text-decoration: underline;
+      outline: none;
+    }
+
+    footer {
+      margin-top: 64px;
+      padding: 16px 0;
+      color: #666;
+      font-size: 0.9rem;
+      text-align: center;
+      max-width: 960px;
+      width: 100%;
+      border-top: 1px solid #333;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 16px;
+      }
+      .skills-list {
+        gap: 24px;
+      }
+      .skill-item {
+        max-width: 100px;
+      }
+      .project-links a {
+        display: inline-block;
+        margin-bottom: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img
+      src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/01108e89-1d8d-471f-a92f-b5bb59cc5537.png"
+      alt="Avatar de Leonikson, desenvolvedor de software, foto estilizada com fundo roxo e texto branco"
+      class="avatar"
+      width="150"
+      height="150"
+      loading="lazy"
+      onerror="this.style.display='none'"
+    />
+    <h1>Eu ensino programação</h1>
+    <p>
+      Olá me chamo Leonikson e programador especializado em diversas linguagens e tecnologias modernas. Apaixonado por desenvolvimento, faço projetos elegantes, funcionais e acessíveis.
+    </p>
+  </header>
+
+  <main>
+    <section class="skills-section" aria-labelledby="skills-title">
+      <h2 id="skills-title">Minhas Habilidades Técnicas</h2>
+      <div class="skills-list">
+        <div class="skill-item" tabindex="0" aria-label="Habilidade em JavaScript">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+            alt="Ícone da linguagem JavaScript"
+            class="skill-icon"
+            loading="lazy"
+            onerror="this.style.display='none'"
+            width="64"
+            height="64"
+          />
+          <span>JavaScript</span>
+        </div>
+        <div class="skill-item" tabindex="0" aria-label="Habilidade em Python">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+            alt="Ícone da linguagem Python"
+            class="skill-icon"
+            loading="lazy"
+            onerror="this.style.display='none'"
+            width="64"
+            height="64"
+          />
+          <span>Python</span>
+        </div>
+        <div class="skill-item" tabindex="0" aria-label="Habilidade em HTML5">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+            alt="Ícone da linguagem HTML5"
+            class="skill-icon"
+            loading="lazy"
+            onerror="this.style.display='none'"
+            width="64"
+            height="64"
+          />
+          <span>HTML5</span>
+        </div>
+        <div class="skill-item" tabindex="0" aria-label="Habilidade em CSS3">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+            alt="Ícone da linguagem CSS3"
+            class="skill-icon"
+            loading="lazy"
+            onerror="this.style.display='none'"
+            width="64"
+            height="64"
+          />
+          <span>CSS3</span>
+        </div>
+        
+        </div>
+      </div>
+    </section>
+
+    <section aria-label="Projetos desenvolvidos por mim">
+      <h2>Projetos Recentes</h2>
+      <div class="projects-grid">
+        <article class="project-card" tabindex="0">
+          <img
+            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/83a87d78-317e-4d8a-ab34-37e48f249f01.png"
+            alt="Imagem ilustrativa do projeto Website Responsivo, quente frio"
+            class="project-image"
+            loading="lazy"
+            onerror="this.style.display='none'"
+          />
+          <h3 class="project-title">Game QUENTE/FRIO</h3>
+          <p class="project-description">
+            Jogo Chamado Quente Frio, construído com JavaScript, ele foi feito com o objetivo de fazer com que o jogador encontre o ponto quente do game, perfeito para dispositivos móveis e desktops.
+          </p>
+          <div class="project-links">
+            <a href="https://gist.github.com/LeoniksonN-28/e12d07a83714d91ba5d26de02aa0f6b1" target="_blank" rel="noopener noreferrer">Código no GitHub</a>
+            <a href="https://editor.p5js.org/LeoniksonN-2B/full/KRcQqd69m" target="_blank" rel="noopener noreferrer">Ver No P5js</a>
+          </div>
+        </article>
+
+        <article class="project-card" tabindex="0">
+          <img
+            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1a388da2-e99e-42de-a721-829c8512819c.png"
+            alt="Imagem ilustrativa do projeto jogo de corrida"
+            class="project-image"
+            loading="lazy"
+            onerror="this.style.display='none'"
+          />
+          <h3 class="project-title">Game Jogo de Corrida</h3>
+          <p class="project-description">
+            Jogo Chamado Jogo de Corrida, construído com JavaScript, ele foi feito com o objetivo de fazer com que 10 jogadores tenham a competição para ganhar a corrida apertando teclas, perfeito para dispositivos móveis e desktops.
+          </p>
+          <div class="project-links">
+            <a href="https://gist.github.com/LeoniksonN-28/d8cb4c178c0c5e6da5d353639e2d043d" target="_blank" rel="noopener noreferrer">Código no GitHub</a>
+            <a href="https://editor.p5js.org/LeoniksonN-2B/full/6N2ba7NN5" target="_blank" rel="noopener noreferrer">Ver No P5js</a>
+          </div>
+        </article>
+
+        <article class="project-card" tabindex="0">
+          <img
+            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/65675fb2-c082-48b3-ade6-fd8467e8d3ee.png"
+            alt="Imagem ilustrativa do projeto efeito monalisa"
+            class="project-image"
+            loading="lazy"
+            onerror="this.style.display='none'"
+          />
+          <h3 class="project-title">Game Efeito Monalisa</h3>
+          <p class="project-description">
+            Jogo Chamado Efeito Monalisa, construído com JavaScript, ele foi feito com o objetivo de fazer com que o jogador passe o mouse pela região do quadrado e os olhos do personagem do projeto ira acompanhar o cursor, perfeito para dispositivos móveis e desktops.
+          </p>
+          <div class="project-links">
+            <a href="https://gist.github.com/LeoniksonN-28/415fe2211f66e62f50ccbbb1b807eb88" target="_blank" rel="noopener noreferrer">Código no GitHub</a>
+            <a href="https://editor.p5js.org/LeoniksonN-2B/full/sukco1wR2" target="_blank" rel="noopener noreferrer">Ver No P5js</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Leonikson - Desenvolvedor de projetos</p>
+  </footer>
+</body>
+</html>
+
